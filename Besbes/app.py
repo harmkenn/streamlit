@@ -1,17 +1,21 @@
 # https://www.youtube.com/watch?v=wDysPcF0Hbc
-import streamlit as st 
-st.title("This is my first stremlit App")
-st.header("A machine learning application to detect types of flowers")
-st.subheader("built by Ken Harmon")
-st.markdown("this is a description")
-st.markdown("If True, the data is a pandas DataFrame including columns with appropriate dtypes (numeric). The target is a pandas DataFrame or Series depending on the number of target columns. If return_X_y is True, then (data, target) will be pandas DataFrames or Series as described below.")
-st.markdown("If True, the data is a pandas DataFrame including columns with appropriate dtypes (numeric). The target is a pandas DataFrame or Series depending on the number of target columns. If return_X_y is True, then (data, target) will be pandas DataFrames or Series as described below.")
-st.markdown("*Here is some italics*")
-st.markdown("**Here is some Bold**")
-st.markdown("* Here is bullet")
-st.info("Here is some information")
-st.warning("Here is a warning")
-st.error("Here is an error")
+import streamlit as st
+import pandas as pd
+st.title("My Streamlit App")
+st.header("A Machine Learning app")
+st.subheader("Built by Ken Harmon")
+st.markdown("This is the description")
+st.markdown("Out of the box, a typical web app created using Streamlit is a one page app. In this video, I will be showing you how you can make a multi-page web app in Streamlit. How useful is a multiple page web app? Well, there are many uses for it such as separating the contents of the app into self-contained and organized topics.")
+st.markdown("*This is italics*")
+st.markdown("**This is Bold**")
+st.markdown("* This is a bullet")
+st.info("This is information")
+st.warning("This is a Warning")
+st.error("This is an Error")
+
+iris_data = pd.read_csv("./data/iris.csv")
+
+st.write(iris_data)
 
 
 
