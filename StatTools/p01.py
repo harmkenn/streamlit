@@ -12,7 +12,7 @@ st.sidebar.subheader("Settings")
 
 gs_URL = st.text_input("Public Google Sheet URL:") 
 googleSheetId = gs_URL.split("spreadsheets/d/")[1].split("/edit")[0]
-worksheetName = "Sheet1"
+worksheetName = st.text_input("Sheet Name:","Sheet1")
 URL = f'https://docs.google.com/spreadsheets/d/{googleSheetId}/gviz/tq?tqx=out:csv&sheet={worksheetName}'
 
 @st.cache (ttl = 600)
@@ -25,7 +25,6 @@ df = upload_gs(URL)
 global numeric_columns
 global non_numeric_columns
 try:
-    st.write(df)
     numeric_columns = list(df.select_dtypes(['float', 'int']).columns)
     non_numeric_columns = list(df.select_dtypes(['object']).columns)
     non_numeric_columns.append(None)
@@ -73,7 +72,7 @@ if chart_select == 'Dotplot':
     except Exception as e:
         print(e)
 
-
+st.write(df)
 
 
 
