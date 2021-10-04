@@ -6,6 +6,7 @@ import pandas as pd
 
 # title of the app
 st.title("Python Stat Tools v1.0")
+st.subtitle("by Ken Harmon")
 
 # Add a sidebar
 st.sidebar.subheader("Settings")
