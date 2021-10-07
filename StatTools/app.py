@@ -8,8 +8,8 @@ st.set_page_config(layout="wide")
 apps = MultiApp()
 
 # Add all your application here
-apps.add_app("Quantitative Stats", quant.app)
 apps.add_app("Home", home.app)
+apps.add_app("Quantitative Stats", quant.app)
 apps.add_app("Create an interactive map", backends.app)
 apps.add_app("Customize the default map", customize.app)
 apps.add_app("Change basemaps", basemaps.app)
