@@ -1,2 +1,7 @@
-# requirements.txt
-gsheetsdb==0.1.13
+geopandas
+keplergl
+streamlit
+streamlit-folium
+streamlit-keplergl
+xarray_leaflet
+git+git://github.com/giswqs/leafmap
