@@ -2,7 +2,6 @@ import streamlit as st
 import plotly_express as px
 import pandas as pd
 
-
 def app():
     # title of the app
     st.title("Python Stat Tools v1.0")
