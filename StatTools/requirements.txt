@@ -1,7 +1,3 @@
-geopandas
-keplergl
 streamlit
-streamlit-folium
-streamlit-keplergl
-xarray_leaflet
-git+git://github.com/giswqs/leafmap
+numpy
+pandas

@@ -1,22 +1,13 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import quant, home, backends, basemaps, customize, demo, tile_layer, uber_nyc, vector
+from apps import quant, discrete, normal # import your app modules here
 
-st.set_page_config(layout="wide")
-
-
-apps = MultiApp()
+app = MultiApp()
 
 # Add all your application here
-apps.add_app("Home", home.app)
-apps.add_app("Quantitative Stats", quant.app)
-apps.add_app("Create an interactive map", backends.app)
-apps.add_app("Customize the default map", customize.app)
-apps.add_app("Change basemaps", basemaps.app)
-apps.add_app("Add tile layers", tile_layer.app)
-apps.add_app("Add vector", vector.app)
-apps.add_app("Demo", demo.app)
-apps.add_app("Pydeck", uber_nyc.app)
+app.add_app("Quantitative Stats", quant.app)
+app.add_app("Discrete Probability", discrete.app)
+app.add_app("Normal Probability", normal.app)
 
 # The main app
-apps.run()
+app.run()
